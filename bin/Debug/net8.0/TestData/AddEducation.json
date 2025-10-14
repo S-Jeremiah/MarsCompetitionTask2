@@ -1,0 +1,58 @@
+﻿{
+  "Educations": [
+    {
+      "Scenario": "Add Valid Education",
+      "College": "Anna University",
+      "Country": "India",
+      "Title": "B.Tech",
+      "Degree": "Electronics and Communication",
+      "Year": "2014",
+      "ExpectedResult": "Success"
+    },
+    {
+      "Scenario": "Add Existing Record Education",
+      "College": "Anna University",
+      "Country": "India",
+      "Title": "B.Tech",
+      "Degree": "Electronics and Communication",
+      "Year": "2014",
+      "ExpectedResult": "Information already Exist"
+    },
+    {
+      "Scenario": "Add Education With Blank College",
+      "College": "Anna University",
+      "Country": "  ",
+      "Title": "M.B.A",
+      "Degree": "Finance",
+      "Year": "2018",
+      "ExpectedResult": "BlankCountry"
+    },
+    {
+      "Scenario": "Add Education With Blank Title",
+      "College": "Anna University",
+      "Country": "India",
+      "Title": "  ",
+      "Degree": "Finance",
+      "Year": "2018",
+      "ExpectedResult": "BlankTitle"
+    },
+    {
+      "Scenario": "Add Education With Blank Year",
+      "College": "Anna University",
+      "Country": "India",
+      "Title": "B.Tech",
+      "Degree": "Finance",
+      "Year": "  ",
+      "ExpectedResult": "BlankYear"
+    },
+    {
+      "Scenario": "Add Education With Blank Degree ",
+      "College": " Anna University  ",
+      "Country": "India",
+      "Title": "B.Sc",
+      "Degree": "   ",
+      "Year": "2018",
+      "ExpectedResult": "BlankDegree"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+﻿{
+  "Educations": [
+    {
+      "Scenario": "Edit College Only",
+      "ExistingCollege": "Anna University",
+      "ExistingCountry": "India",
+      "ExistingTitle": "B.Tech",
+      "NewCollege": "SRM University",
+      "NewCountry": "India",
+      "NewTitle": "B.Tech",
+      "Degree": "Electronics and Communication",
+      "Year": "2013",
+      "ExpectedResult": "Education has been updated"
+    },
+    {
+      "Scenario": "Edit Country Only",
+      "ExistingCollege": "Anna University",
+      "ExistingCountry": "India",
+      "ExistingTitle": "M.Tech",
+      "NewCollege": "Anna University",
+      "NewCountry": "New Zealand",
+      "NewTitle": "M.Tech",
+      "Degree": "Electronics and TeleCommunication",
+      "Year": "2016",
+      "ExpectedResult": "Education has been updated"
+    },
+    {
+      "Scenario": "Edit Title Only",
+      "ExistingCollege": "Anna University",
+      "ExistingCountry": "India",
+      "NewCollege": "Anna University",
+      "NewCountry": "New Zealand",
+      "ExistingTitle": "M.Tech",
+      "NewTitle": "B.Tech",
+      "Degree": "Electronics and TeleCommunication",
+      "Year": "2016",
+      "ExpectedResult": "Education has been updated"
+    }
+
+  ]
+}
