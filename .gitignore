@@ -1,0 +1,9 @@
+# Ignore Visual Studio temp files
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.pdb
+*.cache
+*.tmp
