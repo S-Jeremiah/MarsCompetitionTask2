@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U9j8QksZVBA=",
+  "dgSpecHash": "oQoJL2Poj9Y=",
   "success": true,
-  "projectFilePath": "C:\\Users\\shalu\\Industry Connect\\Workspace\\ProjectTurnUpPortal\\MARSCOMPETITION\\MARSCOMPETITION.csproj",
+  "projectFilePath": "C:\\Users\\shalu\\Industry Connect\\MARSCOMPETITION\\MARSCOMPETITION.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shalu\\.nuget\\packages\\anglesharp\\1.1.2\\anglesharp.1.1.2.nupkg.sha512",
     "C:\\Users\\shalu\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",

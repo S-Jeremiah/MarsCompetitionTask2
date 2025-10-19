@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shalu\\Industry Connect\\Workspace\\ProjectTurnUpPortal\\MARSCOMPETITION\\MARSCOMPETITION.csproj": {}
+    "C:\\Users\\shalu\\Industry Connect\\MARSCOMPETITION\\MARSCOMPETITION.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shalu\\Industry Connect\\Workspace\\ProjectTurnUpPortal\\MARSCOMPETITION\\MARSCOMPETITION.csproj": {
+    "C:\\Users\\shalu\\Industry Connect\\MARSCOMPETITION\\MARSCOMPETITION.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shalu\\Industry Connect\\Workspace\\ProjectTurnUpPortal\\MARSCOMPETITION\\MARSCOMPETITION.csproj",
+        "projectUniqueName": "C:\\Users\\shalu\\Industry Connect\\MARSCOMPETITION\\MARSCOMPETITION.csproj",
         "projectName": "MARSCOMPETITION",
-        "projectPath": "C:\\Users\\shalu\\Industry Connect\\Workspace\\ProjectTurnUpPortal\\MARSCOMPETITION\\MARSCOMPETITION.csproj",
+        "projectPath": "C:\\Users\\shalu\\Industry Connect\\MARSCOMPETITION\\MARSCOMPETITION.csproj",
         "packagesPath": "C:\\Users\\shalu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shalu\\Industry Connect\\Workspace\\ProjectTurnUpPortal\\MARSCOMPETITION\\obj\\",
+        "outputPath": "C:\\Users\\shalu\\Industry Connect\\MARSCOMPETITION\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

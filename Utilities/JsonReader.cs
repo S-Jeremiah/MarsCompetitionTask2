@@ -12,7 +12,7 @@ namespace MARSCOMPETITION.Utilities
     {
         public static T LoadJson<T>(string fileName)
         {
-           string filepath =Path.Combine(AppDomain.CurrentDomain.BaseDirectory,fileName);
+            string filepath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
             var json = File.ReadAllText(filepath);
             return JsonConvert.DeserializeObject<T>(json) ?? throw new InvalidOperationException($"Failed to deserialize JSON file: {fileName}");
 

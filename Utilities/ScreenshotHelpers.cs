@@ -11,12 +11,15 @@ using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 
 
+
 namespace MARSCOMPETITION.Utilities
 {
     public static class ScreenshotHelpers
     {
-        public static string CaptureScreenshot(IWebDriver driver, string fileName, string folderPath = "Screenshots")
+        public static string CaptureScreenshot(IWebDriver driver, string fileName)
         {
+            string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory)!.Parent!.Parent!.Parent!.FullName;
+            string folderPath = Path.Combine(projectDir, "Screenshots");
             if (driver == null)
                 throw new ArgumentNullException(nameof(driver), "WebDriver instance cannot be null.");
             if (!Directory.Exists(folderPath))
@@ -32,18 +35,19 @@ namespace MARSCOMPETITION.Utilities
 
         }
 
-       /* public static MediaEntityModelProvider CaptureScreenshot(IWebDriver driver, string screenshotName)
-        {
-            if (driver == null)
-                throw new ArgumentNullException(nameof(driver), "WebDriver instance cannot be null.");
+        /* public static MediaEntityModelProvider CaptureScreenshot(IWebDriver driver, string screenshotName)
+         {
+             if (driver == null)
+                 throw new ArgumentNullException(nameof(driver), "WebDriver instance cannot be null.");
 
-            // Take screenshot as Base64
-            ITakesScreenshot ts = (ITakesScreenshot)driver;
-            Screenshot screenshot = ts.GetScreenshot();
-            string base64Screenshot = screenshot.AsBase64EncodedString;
+             // Take screenshot as Base64
+             ITakesScreenshot ts = (ITakesScreenshot)driver;
+             Screenshot screenshot = ts.GetScreenshot();
+             string base64Screenshot = screenshot.AsBase64EncodedString;
 
-            // Attach to ExtentReports
-            return MediaEntityBuilder.CreateScreenCaptureFromBase64String(base64Screenshot).Build();
-        }*/
-    }  
+             // Attach to ExtentReports
+             return MediaEntityBuilder.CreateScreenCaptureFromBase64String(base64Screenshot).Build();
+         }*/
+    }
 }
+

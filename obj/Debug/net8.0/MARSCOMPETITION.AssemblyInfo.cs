@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MARSCOMPETITION")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ddd1e094f9a41520617489ca215810ec965b333")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2bf018bfc9603a76abebd0602c50edc2502939e")]
 [assembly: System.Reflection.AssemblyProductAttribute("MARSCOMPETITION")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MARSCOMPETITION")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

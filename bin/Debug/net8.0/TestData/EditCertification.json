@@ -1,0 +1,45 @@
+﻿{
+  "Certifications": [
+    {
+      "Scenario": "Edit Certification",
+      "ExistingCertificate": "Agile Tester",
+      "NewCertificate": "Testing Advanced",
+      "ExistingCertifiedFrom": "ISTQB",
+      "NewCertifiedFrom": "IISTB",
+      "ExistingYear": "2014",
+      "NewYear": "2016",
+      "ExpectedResult": "Success"
+    },
+    {
+      "Scenario": "Edit  certificate only",
+      "ExistingCertificate": "Agile Tester",
+      "NewCertificate": "Testing Advanced",
+      "ExistingCertifiedFrom": "ISTQB",
+      "NewCertifiedFrom": "ISTQB",
+      "ExistingYear": "2014",
+      "NewYear": "2014",
+      "ExpectedResult": "Success"
+    },
+    {
+      "Scenario": "Edit  Certified from only",
+      "ExistingCertificate": "Agile Tester",
+      "NewCertificate": "Agile Tester",
+      "ExistingCertifiedFrom": "ISTQB",
+      "NewCertifiedFrom": "IISTB",
+      "ExistingYear": "2014",
+      "NewYear": "2014",
+      "ExpectedResult": "Success"
+    },
+    {
+      "Scenario": "Edit  Year only",
+      "ExistingCertificate": "Agile Tester",
+      "NewCertificate": "Agile Tester",
+      "ExistingCertifiedFrom": "ISTQB",
+      "NewCertifiedFrom": "ISTQB",
+      "ExistingYear": "2014",
+      "NewYear": "2016",
+      "ExpectedResult": "Success"
+    }
+
+  ]
+}
