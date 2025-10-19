@@ -11,7 +11,7 @@ namespace MARSCOMPETITION.Utilities
     public static class ExtentManager
     {
         private static ExtentReports? _extent;
-        private static ExtentSparkReporter?_sparkReporter;
+        private static ExtentSparkReporter? _sparkReporter;
 
         public static ExtentReports GetExtent()
         {
@@ -24,7 +24,7 @@ namespace MARSCOMPETITION.Utilities
                 Console.WriteLine("=== Extent Report Initialization ===");
 
                 _sparkReporter = new ExtentSparkReporter(reportPath);
-               _extent = new ExtentReports();
+                _extent = new ExtentReports();
                 _extent.AttachReporter(_sparkReporter);
                 _extent.AddSystemInfo("Tester", "Shirley");
                 _extent.AddSystemInfo("Environment", "QA");

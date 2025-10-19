@@ -1,0 +1,41 @@
+﻿{
+  "Certifications": [
+    {
+      "Scenario": "Add Valid Certification",
+      "Certificate": "Testing Foundation",
+      "CertifiedFrom": "ISTQB",
+      "Year": "2014",
+      "ExpectedResult": "Success"
+    },
+    {
+      "Scenario": "Add Duplicate Certification",
+      "Certificate": "Testing Foundation",
+      "CertifiedFrom": "ISTQB",
+      "Year": "2014",
+      "ExpectedResult": "Information already Exist"
+    },
+    {
+      "Scenario": "Add blank Certificate",
+      "Certificate": "    ",
+      "CertifiedFrom": "ISTQB",
+      "Year": "2014",
+      "ExpectedResult": "BlankCertificate"
+    },
+    {
+      "Scenario": "Add blank Certified from",
+      "Certificate": "Testing Foundation",
+      "CertifiedFrom": "    ",
+      "Year": "2014",
+      "ExpectedResult": "BlankCertifiedfrom"
+    },
+    {
+      "Scenario": "Add blank Year ",
+      "Certificate": "Testing Foundation",
+      "CertifiedFrom": "ISTQB",
+      "Year": "    ",
+      "ExpectedResult": "BlankYear"
+    }
+    
+    
+  ]
+}

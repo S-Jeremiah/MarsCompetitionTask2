@@ -1,0 +1,28 @@
+﻿{
+  "Certifications": [
+    {
+      "Scenario": "Delete Certificate entryn",
+      "Certificate": "Testing Foundation",
+      "CertifiedFrom": "random",
+      "Year": "2014",
+      "ExpectedResult": "Certification has been delted from your certification"
+    },
+    {
+      "Scenario": "Delete certifiedfrom",
+      "Certificate": "Non Existing Certificate",
+      "CertifiedFrom": "random",
+      "Year": "2011",
+      "ExpectedResult": "Certification has been delted from your certification"
+    },
+    {
+      "Scenario": "Delete Year",
+      "Certificate": "Non Existing Certificate",
+      "CertifiedFrom": "random",
+      "Year": "2011",
+      "ExpectedResult": "Certification has been delted from your certification"
+    }
+
+
+  ]
+
+}

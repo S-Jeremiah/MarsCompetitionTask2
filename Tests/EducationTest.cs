@@ -19,7 +19,7 @@ namespace MARSCOMPETITION.Tests
     {
         [Test]
         [TestCaseSource(nameof(GetAddEducationData))]
-        public void AddEducationTest(AddEducationData education) 
+        public void AddEducationTest(AddEducationData education)
         {
             var educationPage = new EducationPage(driver);
             educationPage.OpenEducationTab();
@@ -60,7 +60,9 @@ namespace MARSCOMPETITION.Tests
                     Assert.Fail($"Unknown ExpectedResult: {education.ExpectedResult} in scenario: {education.Scenario}");
                     break;
             }
-            
+
+
+
         }
 
 
@@ -73,9 +75,9 @@ namespace MARSCOMPETITION.Tests
             {
                 College = education.ExistingCollege,
                 Country = education.ExistingCountry,
-                Title=education.ExistingTitle,
-                Degree=education.Degree,
-                Year=education.Year,
+                Title = education.ExistingTitle,
+                Degree = education.Degree,
+                Year = education.Year,
                 ExpectedResult = "Success"
             });
             BaseTest.TrackAddedEducation(education.ExistingCollege);
@@ -86,7 +88,7 @@ namespace MARSCOMPETITION.Tests
             // Edit the record
             educationPage.EditEducationSimple(education);
             string actualMsg = educationPage.GetPopupMessage();
-            
+
             Assert.That(actualMsg, Is.EqualTo("Education as been updated"),
                 $"Expected 'Education has been updated' but got: {actualMsg}");
             BaseTest.TrackAddedEducation(education.NewCollege);
@@ -118,8 +120,8 @@ namespace MARSCOMPETITION.Tests
             string actualMsg = educationPage.GetPopupMessage();
             Assert.That(actualMsg, Is.EqualTo("Education entry successfully removed"),
                 $"Expected 'Education entry successfully removed' but got: {actualMsg}");
-           
-            
+
+
         }
 
 
@@ -133,7 +135,7 @@ namespace MARSCOMPETITION.Tests
         }
         public static IEnumerable<EditEducationData> GetEditEducationData()
         {
-           // string  jsonData =File.ReadAllText("TestData/EditEducationData.json");
+            // string  jsonData =File.ReadAllText("TestData/EditEducationData.json");
             var editdata = Utilities.JsonReader.LoadJson<EditEducationDataSet>("TestData/EditEducationData.json");
             return editdata.Educations;
         }

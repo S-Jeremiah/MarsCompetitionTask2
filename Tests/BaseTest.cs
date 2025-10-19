@@ -1,6 +1,7 @@
 ﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 using MARSCOMPETITION.Driver;
+using MARSCOMPETITION.Pages;
 using MARSCOMPETITION.Utilities;
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
@@ -17,14 +18,20 @@ namespace MARSCOMPETITION.Tests
     public class BaseTest : CommonDriver
     {
         private static List<string> AddedEducation = new();
-        
+        private static List<string> AddedCertification = new();
+
         private static readonly List<string> ProtectedEducationRecords = new()
         {
             "Anna University"
-            
+
+        };
+        private static readonly List<string> ProtectedCertificationRecords = new()
+        {
+            "Testing Foundation"
+
         };
         protected static ExtentReports extent = ExtentManager.GetExtent();
-       
+
         protected ExtentTest test;
 
         [OneTimeSetUp]
@@ -40,6 +47,11 @@ namespace MARSCOMPETITION.Tests
             Initialise(); // Starts the browser once
 
             test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
+            LoginToMars();
+        }
+
+        public void LoginToMars()
+        {
             try
             {
                 driver!.Navigate().GoToUrl("http://localhost:5003/Home");
@@ -69,8 +81,6 @@ namespace MARSCOMPETITION.Tests
         }
 
 
-
-
         [TearDown]
         public void CleanUp()
         {
@@ -78,7 +88,7 @@ namespace MARSCOMPETITION.Tests
             var status = TestContext.CurrentContext.Result.Outcome.Status;
             var errorMessage = TestContext.CurrentContext.Result.Message;
             string screenshotPath;
-            
+
 
             switch (status)
             {
@@ -125,18 +135,45 @@ namespace MARSCOMPETITION.Tests
                     }
                 }
 
+
+
+
+                {
+                    if (AddedCertification.Any())
+
+                        driver.FindElement(By.XPath("//a[@data-tab='fourth']")).Click();
+
+                    foreach (var cer in AddedCertification)
+                    {
+                        if (ProtectedCertificationRecords.Contains(cer)) continue;
+                        try
+                        {
+                            var row = driver.FindElement(By.XPath($"//td[text()='{cer}']/.."));
+                            var deleteBtn = row.FindElement(By.XPath(".//i[@class='remove icon']"));
+                            deleteBtn.Click();
+
+                            new WebDriverWait(driver, TimeSpan.FromSeconds(5))
+                                .Until(d => d.FindElements(By.XPath($"//td[text()='{cer}']")).Count == 0);
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                }
+
             }
 
             finally
             {
                 // Always quit browser to ensure a clean session next time
-                
+
                 driver.Quit();
                 driver = null;
 
 
                 AddedEducation.Clear();
-
+                AddedCertification.Clear();
 
             }
         }
@@ -144,6 +181,8 @@ namespace MARSCOMPETITION.Tests
         public void OneTimeTearDown()
         {
             extent.Flush();
+            
+
         }
 
         public static void TrackAddedEducation(string education)
@@ -152,6 +191,14 @@ namespace MARSCOMPETITION.Tests
                 AddedEducation.Add(education);
         }
 
-       
+        public static void TrackAddedCertification(string certification)
+        {
+            if (!AddedCertification.Contains(certification))
+                AddedCertification.Add(certification);
+
+        }
+
+        
     }
 }
+

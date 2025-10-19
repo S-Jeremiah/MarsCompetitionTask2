@@ -1,0 +1,37 @@
+﻿{
+  "Logins": [
+    {
+      "Scenario": "ValidCredentials",
+      "EmailID": "jeroshirley@gmail.com",
+      "Password": "World!123",
+      "ExpectedResult": "Success"
+    },
+    {
+      "Scenario": "InvalidCredentials",
+      "EmailID": "JERO_Shirley.com",
+      "Password": "WrongPass123",
+      "ExpectedResult": "InvalidEmail"
+    },
+    {
+      "Scenario": "Valid Email ID and Incorrect password",
+      "EmailID": "jeroshirley@gmail.com",
+      "Password": "World@#$%^123",
+      "ExpectedResult": "WrongPassword"
+    },
+    {
+      "Scenario": "Incorrect Email ID and Valid  password",
+      "EmailID": "JERO_Shirley.com",
+      "Password": "World!123",
+      "ExpectedResult": "InvalidEmail"
+    },
+    {
+      "Scenario": "Incorrect Email ID and Blank password",
+      "EmailID": "jeroshirley@gmail.com",
+      "Password": "     ",
+      "ExpectedResult": "BlankPassword"
+    }
+
+
+
+  ]
+}
